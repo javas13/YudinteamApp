@@ -1,0 +1,21 @@
+﻿@{
+    Layout = "_AdminLayout";
+}
+           <div class="service_info_container">
+   <h1>Добавить проект в портфолио</h1>
+    @using(Html.BeginForm("UploadFile", "Admin", FormMethod.Post, new{enctype = "multipart/form-data" }))
+    {
+        <span>Select File:</span>
+        <input type="file" name="postedFile"/>
+        <hr />
+        <input id="zagruzkaBtnId" type="submit" value="Upload"/>
+    }
+    <form asp-controller="Admin" asp-action="UploadFile2" method="post">
+  <input id="x" type="hidden" name="content">
+  <trix-editor class="custom_trix" input="x"></trix-editor>
+  <input type="submit" value="Upload"/>
+</form>
+   </div>
+    
+ 
+

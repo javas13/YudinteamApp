@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Service>
+@{
+    ViewData["Title"] = "YudinAndrey - Услуги";
+}
+<div class="services_container">
+        <h1>Мои услуги</h1>
+        <div class="services_lst_div">
+        @foreach(var p in Model)
+        {
+             <a href="@p.Href" class="services_lst_elem">
+             <div class="name_of_service col_of_list">
+               <h2>@p.Name</h2>
+             </div>
+             <div class="descr_of_service col_of_list">
+               <p>@p.Description</p>
+             </div>
+             <div class="price_of_service col_of_list">@("От " + p.Price + " рублей")</div>
+          </a>
+        }                                    
+        </div>
+        <div class="get_consult_div_desctop">
+          <a class="get_consult_div_desctop_a" href="#">Получить констультацию</a>
+        </div>
+    </div>

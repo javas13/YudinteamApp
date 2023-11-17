@@ -1,0 +1,86 @@
+﻿@model IEnumerable<Service>
+@{
+    ViewData["Title"] = "YudinAndrey";
+}
+<div class="intro_container">
+     <div class="desctop_intro">
+       <h1>YUDINANDREY - Программист с опытом работы более 5 лет</h1>
+       <h2 class="intro_h2"><a href="#">Сайты под ключ</a>, <a href="#">сопровождение проектов</a> и не только!</h2>
+       <div class="offer_container">
+       <div class="offer_cart_div offer_cart_mr">
+           <h2 class="offer_name">Сайт под ключ</h2>
+           <p class="offer_desc">Увеличьте свои продажи с помощью интернет магазина или расскажите людям о себе, нам не важна сложность задачи, ведь мы можем всё!</p>
+           <a class="offer_btn" href="Site_Pod_Klych">
+             <span class="btn_span">Подробнее</span>
+           </a>
+       </div>
+       <div class="offer_cart_div">
+         <h2 class="offer_name">Правки сайта</h2>
+         <p class="offer_desc">У вас уже есть сайт, но он вас не устраивает? Не проблема - сделаю все с учетом ваших пожеланий!</p>
+         <a class="offer_btn2" href="#">
+           <span class="btn_span2">Подробнее</span>
+         </a>
+       </div>
+       </div>
+     </div>
+    <div class="mobile_intro">
+      <div class="mess_mob_main_cont">
+        <div class="mess_mob_container">
+          Кто я?
+        </div>
+        <div class="triangle"></div>
+      </div>
+      <div class="mess_mob_main_cont">
+        <div class="mess_mob_container">
+          Программист с опытом работы более 5 лет
+        </div>
+      </div>
+      <div class="mess_mob_main_cont">
+        <div class="mess_mob_container quest_block">
+          Что я могу?
+        </div>
+        <div class="triangle"></div>
+      </div>
+      <div class="mess_mob_main_cont">
+        <div class="mess_mob_container">
+          <a href="#">Сайт под ключ</a>
+          <a href="#">Мобильные приложения</a>
+          <a href="#">Десктопное ПО</a>
+          <a href="#">Сопровожение проектов</a>
+        </div>
+      </div>
+      <div class="mess_mob_main_cont quest_block">
+        <div class="mess_mob_container">
+          Почему я?
+        </div>
+        <div class="triangle"></div>
+      </div>
+      <div class="mess_mob_main_cont">
+        <div class="mess_mob_container">
+          Качество, скорось, сопровождение проекта
+        </div>
+      </div>
+      <div class="get_consult_div_btn">
+        <a href="#">Получить констультацию</a>
+      </div>
+    </div>
+   </div>
+  </div>
+  <div class="works_div">
+    <div class="works_container">
+      <div class="works_h3_flex">
+         <h3 class="works_h3">Мои услуги</h3>
+         <a class="detail_a" href="#">Подробнее</a>
+         </div>
+         <div class="works_offer_flex">
+            @foreach(var elem in Model)
+            {
+             <a href="@elem.Href" class="works_offer_block">
+              <h4>@elem.Name</h4>
+              <p>@elem.Short_Description</p>
+              <span>От @elem.Price рублей</span>
+            </a>           
+            }           
+         </div>
+      </div>
+    </div>

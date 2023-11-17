@@ -1,0 +1,87 @@
+﻿@using YoudinTeamApp.Services;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/YoudinTeamApp.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <a ttarget="_blank" href="https://t.me/javas30" class="circle_connect">
+       <img class="circle_tg_logo" src="~/img/telegram_2111646.png" alt="">
+    </a>
+    <header>
+    <div class="header_div">
+      <div class="header_container">
+        <div class="logo_div">
+          <a class="logo_black" href="@DomainService.CurrentDomain">YudinAndrey</a>
+        </div>
+        <nav>
+          <a class="nav_a_mr" href="@(DomainService.CurrentDomain + "Services")">Услуги</a>
+          <a class="nav_a_mr" href="#">Проекты</a>
+          <a class="nav_a_mr" href="#">Карьера</a>
+          <a class="nav_a_mr" href="#">О нас</a>
+          <a class="nav_a" href="#">Контакты</a>
+        </nav>
+        <div class="burger_btn" id="burger_btn">
+          <div class="burger_up_line burger_line"></div>
+          <div class="burger_middle_line burger_line"></div>
+          <div class="burger_lower_line burger_line"></div>
+        </div>
+      </div>
+
+    </div>
+    </header>
+    <div class="mobile_popup_header" id="mobile_popup_header">
+        <nav>
+          <ul class="mobile_nav_ul">
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Проекты</a></li>
+            <li><a href="#">Обо мне</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="mobile_nav_contact_block">
+          <ul>
+            <li><a href="#"><div class="mobile_header_nav_contacts_logo"><i class="fa fa-envelope mg_r7" aria-hidden="true"></i>YudinTeam@yandex.ru</div></a></li>
+            <li><a href="#"><div class="mobile_header_nav_contacts_logo"><i class="fa fa-phone mg_r7" aria-hidden="true"></i>+ 7 (939) 374 43 48</div></a></li>
+            <li><a class="flex_row" href="#"><div class="mobile_header_nav_contacts_logo"><i class="fa fa-telegram tg_fontsize mg_r7" aria-hidden="true"></i><span>Javas30</span></div></a></li>
+          </ul>
+        </div>
+    </div>
+    
+            @RenderBody()     
+    <footer>
+     <div class="footer_container">
+       <div class="footer_block">
+         <a href="#" class="footer_logo">YUDINANDREY</a>
+       </div>
+       <div class="footer_block">
+         <a href="#" class="title_text">Услуги</a>
+         <a href="#" class="title_links">Сайт под ключ</a>
+         <a href="#" class="title_links">Мобильное приложение</a>
+         <a href="#" class="title_links">Верстка сайта</a>
+         <a href="#" class="title_links">Правки сайта</a>
+         <a href="#" class="title_links">Программное обеспечение</a>
+       </div>
+       <div class="footer_block">
+         <a href="#" class="title_text">Контакты</a>
+          <a href="#" class="title_links">YudinTeam@yandex.ru</a>
+         <a href="tel:+79393744348" class="title_links">+ 7 (939) 374 43 48</a>
+         <a href="#" class="title_links flex_row flex_align_items_centr">
+           <img class="tg_logo mg_r7" src="~/img/telegram_2111646.png" alt="">
+           <span>@@javas30</span>
+         </a>
+       </div>
+       <div class="footer_block">
+         <a href="#" class="title_text">Карьера</a>
+         <a href="#" class="title_links">Хочу работать у вас</a>
+       </div>
+     </div>
+   </footer>
+    <script src="~/js/main.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
